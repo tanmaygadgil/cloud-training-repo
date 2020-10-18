@@ -5,5 +5,5 @@ from .train import HouseTrainer
 
 restServerInstance = Api(flaskAppInstance)
 
-restServerInstance.add_resource(PlmAPI,"/predict/")
-restServerInstance.add_resource(PlmAPI,"/train/<string:path>")
+restServerInstance.add_resource(HousePredictor,"/predict")
+restServerInstance.add_resource(HouseTrainer,"/train/<string:path>")

@@ -12,6 +12,6 @@ from flask import jsonify
 from flask_restful import Resource
 
 class HouseTrainer(Resource):
-    def post(self, ratio):
+    def post(self, path):
         input_data = request.get_json(force=True)
         print(os.getcwd())
