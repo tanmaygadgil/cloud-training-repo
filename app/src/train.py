@@ -12,6 +12,10 @@ from flask import jsonify
 from flask_restful import Resource
 
 class HouseTrainer(Resource):
-    def post(self, path):
+    def post(self):
         input_data = request.get_json(force=True)
         print(os.getcwd())
+
+        data_path = input_data['data_path']
+
+        
