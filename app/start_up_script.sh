@@ -1,12 +1,13 @@
 #!/bin/bash
 
-apt-get update
+apt-get update -y
 
-apt-get install \
+apt-get install -y\
     apt-transport-https \
     ca-certificates \
     curl \
-    software-properties-common
+    software-properties-common \
+    git-all
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 
@@ -15,6 +16,6 @@ add-apt-repository \
    $(lsb_release -cs) \
    stable"
 
-apt-get update
+apt-get update -y
 
 apt-get install -y docker-ce

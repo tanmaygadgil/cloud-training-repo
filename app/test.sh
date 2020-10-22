@@ -11,13 +11,15 @@ sudo wget https://repo.anaconda.com/archive/Anaconda3-2020.07-Linux-x86_64.sh -O
 bash ~/anaconda.sh -b 
 # bash Anaconda3-2020.07-Linux-x86_64.sh
 printf "export PATH="~/anaconda3/bin:$PATH"\n" >> ~/.bashrc
-source ~/.bashrc
-conda install -y scikit-learn pandas jupyter ipython
-conda install -c conda-forge xgboost -y
-conda install -c conda-forge matplotlib -y
-conda install -c conda-forge seaborn -y
-conda install -c conda-forge flask -y
-conda install -c conda-forge flask-restful -y
-
+. ~/.bashrc
 conda init
+
+# conda install -y scikit-learn pandas jupyter ipython
+# conda install -c conda-forge xgboost -y
+# conda install -c conda-forge matplotlib -y
+# conda install -c conda-forge seaborn -y
+# conda install -c conda-forge flask -y
+# conda install -c conda-forge flask-restful -y
+
+
 # jupyter notebook --generate-config
