@@ -1,3 +1,4 @@
+#! /bin/bash
 jupyter notebook --generate-config
 
 printf "c = get_config()
