@@ -1,24 +1,14 @@
-FROM ubuntu:latest
+#Pull the latest UBUNTU base image 
 
-RUN apt-get update \
-  && apt-get install -y python3-pip python3-dev \
-  && cd /usr/local/bin \
-  && ln -s /usr/bin/python3 python \
-  && pip3 install --upgrade pip
+#Install python and python dependencies
 
-RUN apt-get install -y python-pip python-dev build-essential
+#set working dir (this will be home directory of the docker file)
 
-WORKDIR /app
+#Copy source code to the docker container
 
-COPY . /app
+#Install dependencies
 
-RUN apt-get -y install libc-dev
-RUN apt-get -y install build-essential
-RUN pip install -U pip
+#expose port
 
-RUN pip3 --no-cache-dir install -r requirements.txt
+#set entrypoint and command
 
-EXPOSE 5000
-
-ENTRYPOINT ["python3"]
-CMD ["app.py"]
